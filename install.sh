@@ -8,8 +8,6 @@ rm ~/.bash_profile
 link bash_profile ~/.bash_profile
 rm ~/.bashrc
 link bashrc ~/.bashrc
-rm ~/.vimrc
-link vimrc ~/.vimrc
 rm ~/.zsh_profile
 link zsh_profile ~/.zsh_profile
 rm ~/.zshrc
