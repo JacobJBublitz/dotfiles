@@ -1,5 +1,9 @@
 #/usr/bin/env sh
 
+# Remove old versions of Oh My Zsh if present
+rm -rf ~./oh-my-zsh
+
+# Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 rm ~/.bash_logout
