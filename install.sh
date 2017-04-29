@@ -12,7 +12,7 @@ link bashrc ~/.bashrc
 rm ~/.tmux.conf
 link tmux.conf ~/.tmux.conf
 rm -rf ~/.vim
-ln -s $(pwd)/vim ~/.vim
+ln -s "$(pwd)/vim" ~/.vim
 rm ~/.vimrc
 link vimrc ~/.vimrc
 rm ~/.zsh_profile
