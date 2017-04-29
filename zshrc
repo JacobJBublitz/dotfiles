@@ -85,4 +85,4 @@ export ARCHFLAGS="-arch x86_64"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export PATH="${HOME}/.local/bin:${PATH}"
-export MAKEFLAGS="-j4"
+export MAKEFLAGS="-j$(nproc --all)"
