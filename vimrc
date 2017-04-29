@@ -1,27 +1,21 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+set rtp+=~/.vim/bundle/vim-airline
 let g:airline_powerline_fonts = 1
 
-Plugin 'romainl/Apprentice'
+set rtp+=~/.vim/bundle/apprentice
+set rtp+=~/.vim/bundle/vim-syntax-extra
+set rtp+=~/.vim/bundle/tagbar
+set rtp+=~/.vim/bundle/youcompleteme
 
-Plugin 'justinmk/vim-syntax-extra'
-
-Plugin 'majutsushi/tagbar'
-
-Plugin 'valloric/youcompleteme'
-
-call vundle#end()
 filetype plugin indent on
 
 syntax on
 colorscheme apprentice
+
+augroup filetype
+	au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
 
 nmap <F8> :TagbarToggle<CR>

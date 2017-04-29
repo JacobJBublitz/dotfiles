@@ -11,6 +11,8 @@ rm ~/.bashrc
 link bashrc ~/.bashrc
 rm ~/.tmux.conf
 link tmux.conf ~/.tmux.conf
+rm -rf ~/.vim
+ln -s $(pwd)/vim ~/.vim
 rm ~/.vimrc
 link vimrc ~/.vimrc
 rm ~/.zsh_profile
@@ -18,3 +20,6 @@ link zsh_profile ~/.zsh_profile
 rm ~/.zshrc
 link zshrc ~/.zshrc
 
+
+# Build youcompleteme
+vim/bundle/youcompleteme/install.py --all
