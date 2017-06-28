@@ -3,23 +3,20 @@
 # Install Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-rm ~/.bash_logout
+git submodule update --init --recursive
+
+rm -f ~/.bash_logout
 link bash_logout ~/.bash_logout
-rm ~/.bash_profile
+rm -f ~/.bash_profile
 link bash_profile ~/.bash_profile
-rm ~/.bashrc
+rm -f ~/.bashrc
 link bashrc ~/.bashrc
-rm ~/.tmux.conf
-link tmux.conf ~/.tmux.conf
-rm -rf ~/.vim
-ln -s "$(pwd)/vim" ~/.vim
-rm ~/.vimrc
-link vimrc ~/.vimrc
+rm -rf ~/.config/nvim
+ln -s "$(pwd)/config/nvim" ~/.config/nvim
 rm ~/.zsh_profile
 link zsh_profile ~/.zsh_profile
 rm ~/.zshrc
 link zshrc ~/.zshrc
 
+$(pwd)/config/nvim/plugins/youcompleteme/install.py --all --system-libclang --system-boost
 
-# Build youcompleteme
-vim/bundle/youcompleteme/install.py --all
