@@ -1,9 +1,0 @@
-[submodule "config/nvim/plugins/apprentice"]
-	path = config/nvim/plugins/apprentice
-	url = https://github.com/romainl/apprentice.git
-[submodule "config/nvim/plugins/youcompleteme"]
-	path = config/nvim/plugins/youcompleteme
-	url = https://github.com/valloric/youcompleteme
-[submodule "config/nvim/plugins/nerdtree"]
-	path = config/nvim/plugins/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
