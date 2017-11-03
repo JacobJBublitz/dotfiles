@@ -13,8 +13,8 @@
 # is used in the bar {} block below.
 font pango:Fira Mono 8
 
-gaps inner 5
-gaps outer 5
+gaps inner 8
+gaps outer 2
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -141,6 +141,11 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
+# Alsa volume control
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+bindsym XF86AudioMute exec amixer set Master toggle
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
@@ -174,4 +179,6 @@ bar {
 }
 
 exec compton
+
+exec [[ -f "$HOME/.fehbg" ]] && . ~/.fehbg
 
