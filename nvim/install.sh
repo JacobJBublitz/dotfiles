@@ -6,6 +6,7 @@ echo "Installing NeoVim dotfiles and plugins..."
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 	https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+mkdir -p "$HOME/.config/nvim"
 cp init.vim "$HOME/.config/nvim/init.vim"
 
 nvim -E -c PlugInstall -c q -c q
