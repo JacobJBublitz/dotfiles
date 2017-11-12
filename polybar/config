@@ -15,6 +15,7 @@ white      = ${xrdb:polybar.color7:#ffffff}
 ;
 
 [bar/base]
+monitor = ${env:MONITOR}
 width = 100%
 height = 27
 fixed-center = true
@@ -33,6 +34,11 @@ module-margin-left = 5
 modules-left = workspace music
 modules-center = title
 modules-right = packages volume date
+
+
+[bar/secondary]
+inherit = bar/base
+modules-left = workspace
 
 ;
 ; Setup modules
@@ -95,7 +101,7 @@ label-volume-underline = ${colors.white}
 
 [module/workspace]
 type = internal/i3
-pin-workspaces = false
+pin-workspaces = true
 index-sort = true
 enable-click = false
 enable-scroll = false
@@ -119,4 +125,6 @@ label-urgent-underline = ${colors.red}
 label-visible = %name%
 label-visible-padding = 1
 label-visible-underline = ${colors.yellow}
+
+; vim: syn=dosini
 
