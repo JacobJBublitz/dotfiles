@@ -3,6 +3,7 @@
 (cd i3 && ./update.sh)
 (cd nvim && ./update.sh)
 (cd termite && ./update.sh)
+(cd polybar && ./update.sh)
 (cd x && ./update.sh)
 (cd zsh && ./update.sh)
 
