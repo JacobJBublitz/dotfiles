@@ -75,4 +75,14 @@ URxvt.pointerBlank: true
 *color14:     base0F
 *color15:     base07
 
+!
+! i3 colors
+!
+
+i3wm.background: base00
+i3wm.foreground: base05
+
+i3wm.focused:    base02
+i3wm.unfocused:  base00
+i3wm.urgent:     base08
 
