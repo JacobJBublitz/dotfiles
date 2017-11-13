@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+playing=""
+paused=""
+
+player_status=$(playerctl status 2> /dev/null)
+if [[ $? -eq 0 ]]; then
+	metadata="$(playerctl metadata artist) - $(playerctl metadata title)"
+fi
+
+if [[ $player_status = "Playing" ]]; then
+	echo "$playing $metadata"
+elif [[ $player_status = "Paused" ]]; then
+	echo "$paused $metadata"
+else
+	echo ""
+fi
+

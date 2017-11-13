@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+MONITORS="$(xrandr -q | grep " connected" | cut -d ' ' -f1)"
+
+# Launch primary bar
+MONITOR="$(echo "$MONITORS" | head -n1)" polybar -r primary &
+
+for monitor in `echo "$MONITORS" | tail -n-1`; do
+	MONITOR="$monitor" polybar -r secondary &
+done
+
