@@ -18,7 +18,7 @@ function! BuildYCM(info)
 		!./install.py --clang-completer
 	endif
 endfunction
-Plug 'Valloric/YouCompleteMe', { 'for': ['c', 'cpp'], 'do': function('BuildYCM') }
+Plug 'Valloric/YouCompleteMe', { 'do': function('BuildYCM') }
 
 call plug#end()
 

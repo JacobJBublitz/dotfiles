@@ -17,5 +17,6 @@ function install_dotfile() {
 export -f install_dotfile
 
 (cd vim && ./install.sh)
+(cd xorg && ./install.sh)
 (cd zsh && ./install.sh)
 

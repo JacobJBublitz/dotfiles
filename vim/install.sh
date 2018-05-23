@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-echo "Installing NeoVim dotfiles and plugins..."
+echo "Installing Vim dotfiles and plugins..."
 
 install_dotfile vimrc "$HOME/.vimrc"
 
